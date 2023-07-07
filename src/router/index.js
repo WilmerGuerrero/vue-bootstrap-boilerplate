@@ -1,24 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/views/Home.vue'
+import Home from '@/views/HomePage.vue'
 
-import NotFound from '@/components/NotFound.vue'
-
+import BibliographyType from '../views/BibliographyType.vue';
+//src\views\BibliographyType.vue
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '*',
-    name: 'NotFound',
-    component: NotFound
-  }, {
     path: '/',
     name: 'home',
     component: Home,
     meta: {
       auth: false
     }
+  }, {
+    path: '/bibliography-type',
+    name: 'BibliographyType',
+    component: BibliographyType
   }
 ]
 
